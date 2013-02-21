@@ -30,7 +30,7 @@
  *
  * This property must be set to an array of integer arrays. The paging gridview
  * will cycle through the schema array, using the first entry for the first page,
- * the second entry for the second page, etc. When it reaches the end of the 
+ * the second entry for the second page, etc. When it reaches the end of the
  * schema array, it repeats the cycle from the beginning.
  *
  * Example 1:
@@ -51,6 +51,9 @@
 @property (nonatomic, assign) NSUInteger maxNumberOfPages;
 
 @property (nonatomic, assign, readonly) NSUInteger totalPageSizes;
+@property (nonatomic, assign) BOOL isRowMajor;
+@property (nonatomic, strong) NSArray *weightSchema;
+@property (nonatomic, assign) NSUInteger numberOfPages;
 
 #pragma mark - Calculations
 

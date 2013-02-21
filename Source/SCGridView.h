@@ -44,6 +44,9 @@
  *
  */
 @property (nonatomic, strong) NSArray *schema;
+@property (nonatomic, strong) NSArray *weightSchema;
+@property (nonatomic, assign) NSUInteger weightSchemaSum;
+@property (nonatomic, assign) BOOL isRowMajor;
 
 @property (nonatomic, weak) id<SCGridViewDelegate>delegate;
 
