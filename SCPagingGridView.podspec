@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/scribd/SCPagingGridView"
   s.license      = 'MIT'
   s.author       = "Jesse Andersen"
-  s.source       = { :git => "https://github.com/trisix/SCPagingGridView.git", :tag => "v0.0.2" }
+  s.source       = { :git => "https://github.com/trisix/SCPagingGridView.git", :tag => "v0.0.4" }
   s.platform     = :ios, '5.0'
   s.source_files = 'Source', 'Source/**/*.{h,m}'
   s.requires_arc = true
