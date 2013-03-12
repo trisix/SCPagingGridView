@@ -25,6 +25,9 @@
 #import "SCViewRecycler.h"
 #import "SCGridView.h"
 #import "SCPageView.h"
+#define SCAppStatusBarOrientation ([[UIApplication sharedApplication] statusBarOrientation])
+#define SCIsPortrait()  UIInterfaceOrientationIsPortrait(SCAppStatusBarOrientation)
+#define SCIsLandscape() UIInterfaceOrientationIsLandscape(SCAppStatusBarOrientation)
 
 @interface SCPagingGridViewController ()
 
@@ -41,10 +44,16 @@
   if (self = [super init]) {
     _gridRecycler = [[SCViewRecycler alloc] initWithViewClass:[SCGridView class]];
     _cellRecycler = [[SCViewRecycler alloc] initWithViewClass:[self cellClass]];
-    _isRowMajor = NO;
+    if (SCIsPortrait()) {
+      _isRowMajor = YES;
+    } else {
+      _isRowMajor = NO;
+    }
+    
   }
   return self;
 }
+
 
 #pragma mark - UIViewController
 
