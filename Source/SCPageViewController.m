@@ -37,6 +37,20 @@
 
 @implementation SCPageViewController
 
+#pragma mark - HLSViewController
+
+- (BOOL)shouldAutorotate
+{
+  return [super shouldAutorotate];
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+  // This fixes an inconsistency of UIViewController, see HLSViewController.h documentation
+  return [super supportedInterfaceOrientations];
+}
+
+
 #pragma mark - UIViewController
 
 - (void)loadView {

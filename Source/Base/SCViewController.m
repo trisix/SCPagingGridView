@@ -29,14 +29,17 @@
 
 @implementation SCViewController
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    BOOL result = NO;
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        result = YES;
-    } else {
-        result = toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
-    }
-    return result;
+#pragma mark - HLSViewController
+
+- (BOOL)shouldAutorotate
+{
+  return [super shouldAutorotate];
+}
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+  // This fixes an inconsistency of UIViewController, see HLSViewController.h documentation
+  return [super supportedInterfaceOrientations];
 }
 
 @end

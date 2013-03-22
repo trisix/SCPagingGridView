@@ -21,8 +21,8 @@
 //  SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#import "HLSViewController.h"
 
-@interface SCViewController : UIViewController
+@interface SCViewController : HLSViewController
 
 @end
